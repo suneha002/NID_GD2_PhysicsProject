@@ -16,25 +16,25 @@ public class paddleMain : MonoBehaviour
           if (Input.GetKey(KeyCode.W))
         {
           
-           transform.position = new Vector3(transform.position.x,transform.position.y,transform.position.z+0.1f);
+           transform.position = new Vector3(transform.position.x,transform.position.y,transform.position.z+0.5f);
             
         }
         if (Input.GetKey(KeyCode.S))
         {
            
-           transform.position = new Vector3(transform.position.x,transform.position.y,transform.position.z-0.1f);
+           transform.position = new Vector3(transform.position.x,transform.position.y,transform.position.z-0.5f);
             
         }
         if (Input.GetKey(KeyCode.A))
         {
            
-           transform.position = new Vector3(transform.position.x-0.1f,transform.position.y,transform.position.z);
+           transform.position = new Vector3(transform.position.x-0.5f,transform.position.y,transform.position.z);
             
         }
         if (Input.GetKey(KeyCode.D))
         {
            
-           transform.position = new Vector3(transform.position.x+0.1f,transform.position.y,transform.position.z-0.1f);
+           transform.position = new Vector3(transform.position.x+0.5f,transform.position.y,transform.position.z-0.1f);
             
         }
     }
