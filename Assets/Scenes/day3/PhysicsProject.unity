@@ -153,12 +153,12 @@ HingeJoint:
     targetVelocity: 0
     force: 0
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
-    min: 0
-    max: 0
+    min: 2.8957698
+    max: 2.8957698
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -233,7 +233,7 @@ HingeJoint:
   m_ConnectedBody: {fileID: 1384442425}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 0
@@ -246,12 +246,12 @@ HingeJoint:
     targetVelocity: 0
     force: 0
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
     min: 0
-    max: 0
+    max: 180.8776
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -327,7 +327,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 229a380cca92156499464c651b1fa9c4, type: 2}
+  - {fileID: 2100000, guid: b66057653b0baf64192675c7a3a90b6c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -384,6 +384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 811713537}
   - component: {fileID: 811713536}
+  - component: {fileID: 811713538}
   m_Layer: 0
   m_Name: spawn
   m_TagString: Untagged
@@ -406,7 +407,7 @@ MonoBehaviour:
   bubblePrefab: {fileID: 965416179}
   spawnRate: 1
   minX: -2
-  maxX: 10
+  maxX: 6
   spawnY: -5
 --- !u!4 &811713537
 Transform:
@@ -423,6 +424,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &811713538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811713535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a972ca3b508a004bbf5d1524ac52184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::spawn
+  bubblePrefab: {fileID: 1556290781}
+  spawnRate: 1
+  minX: -2
+  maxX: 6
+  spawnY: -5
 --- !u!1 &831557909
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' Score:'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -719,7 +737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26fcf91bf6ca954ab97bda3fb4e3e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::bubble
-  speed: 1.5
+  speed: 0.7
   destroyY: 6
 --- !u!135 &965416181
 SphereCollider:
@@ -767,7 +785,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f80ac93bd8d534a42a7f1e186701ce2c, type: 2}
+  - {fileID: 2100000, guid: 0dd88c48bff720d4eb0eedddd9f5f6e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -808,7 +826,7 @@ Transform:
   m_GameObject: {fileID: 965416179}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.19, y: -5.27, z: 6.66}
+  m_LocalPosition: {x: -1.21, y: -5.27, z: 6.66}
   m_LocalScale: {x: 0.7165668, y: 0.7165668, z: 0.7165668}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -976,7 +994,7 @@ Transform:
   m_GameObject: {fileID: 1166587495}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1178,7 +1196,7 @@ HingeJoint:
   m_ConnectedBody: {fileID: 1715794310}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 0
@@ -1191,12 +1209,12 @@ HingeJoint:
     targetVelocity: 0
     force: 0
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
     min: 0
-    max: 0
+    max: 181.4509
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -1244,7 +1262,7 @@ HingeJoint:
   m_ConnectedBody: {fileID: 1715794308}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 0
@@ -1257,12 +1275,12 @@ HingeJoint:
     targetVelocity: 0
     force: 0
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
     min: 0
-    max: 0
+    max: 180.80476
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -1272,6 +1290,133 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!1 &1556290781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1556290782}
+  - component: {fileID: 1556290785}
+  - component: {fileID: 1556290784}
+  - component: {fileID: 1556290783}
+  - component: {fileID: 1556290786}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1556290782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556290781}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.10700308, y: 0.23295206, z: 0.4034586, w: 0.87835354}
+  m_LocalPosition: {x: 1.1993608, y: -6.2946906, z: 6.66}
+  m_LocalScale: {x: 0.5265549, y: 0.5265548, z: 0.52655476}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 29.707, z: 49.342}
+--- !u!65 &1556290783
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556290781}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1556290784
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556290781}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 229a380cca92156499464c651b1fa9c4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1556290785
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556290781}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1556290786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556290781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0749b31f07dfa364f8b5ea63229da242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mines
+  speed: 0.4
+  destroyY: 6
 --- !u!54 &1624813300
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1310,7 +1455,7 @@ HingeJoint:
   m_ConnectedBody: {fileID: 1715794312}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 0
@@ -1323,12 +1468,12 @@ HingeJoint:
     targetVelocity: 0
     force: 0
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
     min: 0
-    max: 0
+    max: 179.51624
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -1558,7 +1703,7 @@ HingeJoint:
   m_ConnectedBody: {fileID: 1337930004}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 0
@@ -1571,12 +1716,12 @@ HingeJoint:
     targetVelocity: 0
     force: 0
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
     min: 0
-    max: 0
+    max: 180.21214
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -1624,7 +1769,7 @@ HingeJoint:
   m_ConnectedBody: {fileID: 1624813300}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 0
@@ -1637,12 +1782,12 @@ HingeJoint:
     targetVelocity: 0
     force: 0
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
     min: 0
-    max: 0
+    max: 181.10022
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -1690,7 +1835,7 @@ HingeJoint:
   m_ConnectedBody: {fileID: 1285175196}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 0
@@ -1703,12 +1848,12 @@ HingeJoint:
     targetVelocity: 0
     force: 0
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
     min: 0
-    max: 0
+    max: 180.20366
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -1939,7 +2084,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752709841}
   serializedVersion: 5
-  m_Mass: 7
+  m_Mass: 14
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1996,7 +2141,7 @@ HingeJoint:
   m_ConnectedBody: {fileID: 319428099}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 0
@@ -2009,7 +2154,7 @@ HingeJoint:
     targetVelocity: 0
     force: 0
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
@@ -2237,6 +2382,7 @@ SceneRoots:
   - {fileID: 832572040}
   - {fileID: 1285175200}
   - {fileID: 507473285}
+  - {fileID: 1556290782}
   - {fileID: 965416184}
   - {fileID: 811713537}
   - {fileID: 1732748849}

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class bubble : MonoBehaviour
 {
-    public float speed = 1.5f;
+    public float speed = 0.7f;
     public float destroyY = 6f;
 
     void Update()

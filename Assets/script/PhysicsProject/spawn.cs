@@ -3,7 +3,7 @@ using UnityEngine;
 public class spawn : MonoBehaviour
 {
     public GameObject bubblePrefab;
-    public float spawnRate = 0.5f;
+    public float spawnRate = 0.4f;
     public float minX = -4f;
     public float maxX = 4f;
     public float spawnY = -5f;
