@@ -1,24 +1,35 @@
 using UnityEngine;
 
-public class bubble : MonoBehaviour
+public class Bubble : MonoBehaviour
 {
     public float speed = 0.7f;
     public float destroyY = 6f;
 
-    void Update()
-{
-    transform.position += Vector3.up * speed * Time.deltaTime;
+    Rigidbody rb;
 
-    if (transform.position.y > destroyY)
+    void Awake()
     {
-        Destroy(gameObject);
+        rb = GetComponent<Rigidbody>();
     }
-}
+
+    void FixedUpdate()
+    {
+        // Move using physics so triggers fire reliably
+        rb.MovePosition(rb.position + Vector3.up * speed * Time.fixedDeltaTime);
+
+        if (rb.position.y > destroyY)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 void OnTriggerEnter(Collider other)
 {
-    if (other.CompareTag("Spike"))
-    {
-        Destroy(gameObject);
-    }
+    if (!other.CompareTag("Spike")) return;
+
+    GameManager.Instance.BubbleHit();
+    Destroy(gameObject);
 }
+
+
 }
