@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/day 1/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/day3/PhysicsProject.unity
     guid: e5157309fb0016a498e49867bf04885b
+  - enabled: 1
+    path: Assets/Scenes/PhysicsProjectEdited.unity
+    guid: a25fd17df5ab2bc408b4ee7b779fb344
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

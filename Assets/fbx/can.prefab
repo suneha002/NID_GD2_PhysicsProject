@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7008727023473059604
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4857399
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4857399
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4857399
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.039892
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.6786
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.414984
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8218403
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.569718
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 69.461
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: m_Name
+      value: can
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129496810705857465, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 344941d57516b9649bce112bf6f75cd7, type: 2}
+    - target: {fileID: 8100320773420232829, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 344941d57516b9649bce112bf6f75cd7, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1907920130062247050}
+  m_SourcePrefab: {fileID: 100100000, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+--- !u!1 &7891830238169520709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+  m_PrefabInstance: {fileID: 7008727023473059604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-1907920130062247050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7891830238169520709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6928099a2fa54304e9a0eaa65c4bd442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CanSpawn
+  speed: 3
+  maxHeight: 10
