@@ -16,17 +16,20 @@ public class GrafitiWall : MonoBehaviour
 
     void Start()
     {
-        // Set initial wall texture
         SetWallState(0);
     }
 
     public void SetWallState(int state)
     {
+        if (rend == null) return;
         if (wallTextures == null || wallTextures.Length == 0) return;
-        if (state < 0 || state >= wallTextures.Length) return;
+
+        
+        
+        state = Mathf.Clamp(state, 0, wallTextures.Length - 1);
 
         Material[] mats = rend.materials;
-        mats[wallMaterialIndex].mainTexture = wallTextures[state];
+        mats[wallMaterialIndex].SetTexture("_BaseMap", wallTextures[state]); 
         rend.materials = mats;
     }
 }

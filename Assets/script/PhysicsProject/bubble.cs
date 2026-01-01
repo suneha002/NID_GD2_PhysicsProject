@@ -27,7 +27,7 @@ void OnTriggerEnter(Collider other)
 {
     if (!other.CompareTag("Spike")) return;
 
-    GameManager.Instance.BubbleHit();
+    // GameManager.Instance.BubbleHit();
     Destroy(gameObject);
 }
 

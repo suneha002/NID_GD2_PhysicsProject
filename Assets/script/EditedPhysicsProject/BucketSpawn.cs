@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CanSpawn : MonoBehaviour
+public class BucketSpawn : MonoBehaviour
 {
     public float speed = 2f;
     public float maxHeight = 5.5f;
@@ -27,15 +27,15 @@ void OnTriggerEnter(Collider other)
 {
     if (other.CompareTag("Punch"))
     {
-        AudioManager.Instance.PlayNormalHit();
-        GameManager.Instance.LoseLife(1);
+        AudioManager.Instance.PlayPenaltyHit();
+        GameManager.Instance.AddScore(+10);
         if (hitSparkPrefab != null)
         {
             Renderer r = GetComponentInChildren<Renderer>();
 Vector3 spawnPos = r.bounds.center;
 
 Instantiate(hitSparkPrefab, spawnPos, Quaternion.identity);
-            
+            Debug.Log("Spark spawned at " + hitSparkPrefab.transform.position);
         }
         else
         {

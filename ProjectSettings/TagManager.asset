@@ -8,6 +8,9 @@ TagManager:
   - ground
   - targetOBject
   - Spike
+  - Punch
+  - Cann
+  - Wall
   layers:
   - Default
   - TransparentFX

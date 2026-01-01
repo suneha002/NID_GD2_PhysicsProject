@@ -32,7 +32,7 @@ void OnTriggerEnter(Collider other)
 {
     if (!other.CompareTag("Spike")) return;
 
-    GameManager.Instance.CanHit();
+    // GameManager.Instance.CanHit();
     Destroy(gameObject);
 }
 

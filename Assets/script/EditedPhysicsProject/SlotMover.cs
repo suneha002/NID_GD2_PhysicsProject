@@ -1,58 +1,69 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class SlotMover : MonoBehaviour
 {
-    [Header("Fixed slot positions")]
+    [Header("Slots")]
     public Transform[] slots;
-
-    [Header("Movement")]
     public float moveSpeed = 8f;
 
-    int currentIndex = 0;
+    [Header("References")]
+    public Springer stickHinge; 
+    public Movement ballDriver;           
+
+    int currentIndex;
     Vector3 targetPosition;
+    Rigidbody rb;
+    bool onLeftWall = true;
 
     void Start()
     {
-        if (slots.Length == 0) return;
-
+        rb = GetComponent<Rigidbody>();
         currentIndex = 0;
-        targetPosition = slots[currentIndex].position;
-        transform.position = targetPosition;
+        targetPosition = slots[0].position;
+        rb.position = targetPosition;
+        ApplyWall(true);
     }
 
     void Update()
     {
-        // Input (discrete, not continuous)
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            MoveLeft();
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            MoveRight();
-        }
+        if (Input.GetKeyDown(KeyCode.A)) Move(-1);
+        if (Input.GetKeyDown(KeyCode.D)) Move(1);
+    }
 
-        // Smooth snap movement
-        transform.position = Vector3.MoveTowards(
-            transform.position,
+    void FixedUpdate()
+    {
+        rb.MovePosition(Vector3.MoveTowards(
+            rb.position,
             targetPosition,
-            moveSpeed * Time.deltaTime
-        );
+            moveSpeed * Time.fixedDeltaTime
+        ));
     }
 
-    void MoveLeft()
+    void Move(int dir)
     {
-        if (currentIndex <= 0) return;
+        int next = Mathf.Clamp(currentIndex + dir, 0, slots.Length - 1);
+        if (next == currentIndex) return;
 
-        currentIndex--;
+        currentIndex = next;
         targetPosition = slots[currentIndex].position;
+
+        bool left = currentIndex <= 2;
+        if (left != onLeftWall)
+            ApplyWall(left);
     }
 
-    void MoveRight()
+    void ApplyWall(bool left)
     {
-        if (currentIndex >= slots.Length - 1) return;
+        onLeftWall = left;
+        rb.MoveRotation(left ? Quaternion.Euler(0, 0, 0) : Quaternion.Euler(0, 90, 0));
 
-        currentIndex++;
-        targetPosition = slots[currentIndex].position;
+        // Update hinge axis after rotation
+        if (stickHinge != null)
+            stickHinge.UpdateAxisFromTile();
+
+        // Ensure BallDriver has tile reference (only if unassigned)
+        if (ballDriver != null && ballDriver.tile == null)
+            ballDriver.tile = transform;
     }
 }

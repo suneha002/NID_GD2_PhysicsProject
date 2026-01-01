@@ -70,10 +70,57 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 344941d57516b9649bce112bf6f75cd7, type: 2}
     - target: {fileID: 919132149155446097, guid: 6b75d9c5d28d3294386e4350ec5f4573, type: 3}
       propertyPath: m_Name
-      value: bucket
+      value: waterbuck
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b75d9c5d28d3294386e4350ec5f4573, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8102594617647959931}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b75d9c5d28d3294386e4350ec5f4573, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2011745453255609292}
   m_SourcePrefab: {fileID: 100100000, guid: 6b75d9c5d28d3294386e4350ec5f4573, type: 3}
+--- !u!1 &7633721840658609637 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6b75d9c5d28d3294386e4350ec5f4573, type: 3}
+  m_PrefabInstance: {fileID: 7291613945798183092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &-8102594617647959931
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7633721840658609637}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2011745453255609292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7633721840658609637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0835604dc1bed2438c1e8a58cf5adc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BucketSpawn
+  speed: 3
+  maxHeight: 10
+  hitSparkPrefab: {fileID: 5730468714822107745, guid: 1bb4e9ee2a690034d88023040627fb7f, type: 3}

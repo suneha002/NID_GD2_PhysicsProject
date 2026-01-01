@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: can
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      propertyPath: m_TagString
+      value: Cann
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -79,6 +83,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
       insertIndex: -1
       addedObject: {fileID: -1907920130062247050}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7298886624841394803}
   m_SourcePrefab: {fileID: 100100000, guid: f198bc5de533bc44083ed4e7dfbd6038, type: 3}
 --- !u!1 &7891830238169520709 stripped
 GameObject:
@@ -97,5 +104,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6928099a2fa54304e9a0eaa65c4bd442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CanSpawn
-  speed: 3
+  speed: 2
   maxHeight: 10
+  hitSparkPrefab: {fileID: 5730468714822107745, guid: 1bb4e9ee2a690034d88023040627fb7f, type: 3}
+--- !u!65 &-7298886624841394803
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7891830238169520709}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
